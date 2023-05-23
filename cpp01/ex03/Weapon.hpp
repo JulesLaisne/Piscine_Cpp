@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/23 16:30:15 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/05/23 16:35:16 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/05/23 16:40:55 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/05/23 16:59:14 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 
-int main(void){
+class Weapon
+{
+    private:
+        
+        std::string _type;
+        
+    public:
+    
+        Weapon();
+        ~Weapon();
 
-    std::string  str = "HI THIS IS BRAIN";
-    std::string* stringPTR = &str;
-    std::string& stringREF = str;
-    
-    std::cout << &str << std::endl;
-    std::cout << stringPTR << std::endl;
-    std::cout << &str << std::endl;
-    std::cout << std::endl;
-    std::cout << str << std::endl;
-    std::cout << *stringPTR << std::endl;
-    std::cout << str << std::endl;
-    
-    return 0;
-}
+        const std::string& get_name();
+        void setType(const std::string type);
+};
