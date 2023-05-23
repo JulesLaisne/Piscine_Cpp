@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:43:38 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/05/23 11:03:04 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/05/23 11:22:37 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iomanip>
 #include "PhoneBook.Class.hpp"
 #include "Contact.Class.hpp"
+#include "Colors.Class.hpp"
 
 Contact    add_Contact(void);
 

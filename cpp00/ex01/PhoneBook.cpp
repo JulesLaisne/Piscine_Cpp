@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 15:28:42 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/05/23 11:10:51 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/05/23 11:22:40 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <cstdlib>
 #include "PhoneBook.Class.hpp"
 #include "Contact.Class.hpp"
+#include "Colors.Class.hpp"
 
 PhoneBook::PhoneBook( void ) : max_index(0)
 {
