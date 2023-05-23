@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
 			index = 0;
 			while (index < str.length())
 			{
-				std::cout << std::toupper(str[index],loc);
+				std::cout << std::toupper(str[index], loc);
 				index++;
 			}
 			i++;
