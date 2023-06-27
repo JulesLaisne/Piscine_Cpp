@@ -5,28 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 16:34:49 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/06/27 14:03:23 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/06/27 14:17:36 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/06/27 15:23:10 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
 
-int main(void){
+int main( void ) {
+    
+    Fixed a;
+    Fixed b( a );
+    Fixed c;
+    c = b;
 
-    Harl        Harl;
-    std::string level;
-
-    Harl.complain("ERROR");
-    Harl.complain("DEBUG");
-    Harl.complain("WARNING");
-    Harl.complain("INFO");
-    Harl.complain("INFOS");
-    Harl.complain("EWRERWE");
-    Harl.complain("");
-
-    std::cout << "Enter a complaint level: ";
-    std::cin >> level;
-    Harl.complain(level);
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
     return 0;
 }

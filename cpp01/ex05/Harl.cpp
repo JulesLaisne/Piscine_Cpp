@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 16:36:35 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/05/24 16:44:16 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/06/27 14:08:19 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ Harl::Harl(){
 Harl::~Harl(){
     
 }
+
+typedef void(Harl::* func_member) ( void );
 
 void    Harl::debug( void ){
 
@@ -41,6 +43,32 @@ void    Harl::error( void ){
 }
 
 void Harl::complain( std::string level ){
-    
-    
+
+        std::string  names[4] = {
+            "DEBUG",
+            "INFO",
+            "WARNING",
+            "ERROR"
+        };
+
+        func_member  member[4] = {
+                &Harl::debug,
+                &Harl::info,
+                &Harl::warning,
+                &Harl::error
+        };
+        if (level.empty())
+        {
+            std::cout << "Detail your complaint." << std::endl;
+            return ;
+        }
+        for (size_t i = 0; i < 4; i++)
+        {
+            if (!names[i].compare(level))
+            {
+                (this->*member[i])();
+                return ;
+            }
+        }
+        std::cout << "I cannot hear your complaint." << std::endl;
 }

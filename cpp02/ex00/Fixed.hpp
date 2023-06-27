@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 16:34:49 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/06/27 14:03:23 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/06/27 14:17:28 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/06/27 15:25:33 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-int main(void){
+#include <iostream>
 
-    Harl        Harl;
-    std::string level;
+class Fixed
+{
+    private:
+        int              _num;
+        static const int _constNum = 8;
+        
+    public:
+        Fixed( void );
+        Fixed( Fixed const & i );
+        ~Fixed();
+        Fixed& operator=(const Fixed& other);
 
-    Harl.complain("ERROR");
-    Harl.complain("DEBUG");
-    Harl.complain("WARNING");
-    Harl.complain("INFO");
-    Harl.complain("INFOS");
-    Harl.complain("EWRERWE");
-    Harl.complain("");
+        int     getRawBits( void ) const;
+        void    setRawBits( int const raw );
+};
 
-    std::cout << "Enter a complaint level: ";
-    std::cin >> level;
-    Harl.complain(level);
-    return 0;
-}
+
+#endif
