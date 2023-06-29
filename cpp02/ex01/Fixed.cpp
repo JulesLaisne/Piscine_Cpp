@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 14:17:30 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/06/29 10:03:34 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/06/29 09:57:23 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/06/29 10:06:41 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "Fixed.hpp"
 
@@ -19,10 +20,25 @@ Fixed::Fixed( void ) {
     std::cout << "Default constructor called" << std::endl;
 }
 
+Fixed::Fixed( int const num ) {
+    
+    this->_num = num;
+    this->_constNum = 8;
+    std::cout << "Int constructor called" << std::endl;
+}
+
+Fixed::Fixed( float const num ) {
+    
+    this->_constNum = 8;
+    this->_num = num / this->_constNum;
+    std::cout << "Int constructor called" << std::endl;
+}
+
 Fixed::Fixed( Fixed const & i ) {
     
     std::cout << "Copy constructor called" << std::endl;
-    this->_num = i.getRawBits();
+    this->_num = i._num;
+    this->_constNum = 8;
 }
 
 Fixed::~Fixed() {
@@ -36,19 +52,7 @@ Fixed& Fixed::operator=(const Fixed& other) {
             return *this;
         }
         std::cout << "Copy assignment operator called" << std::endl;
-        this->_num = other.getRawBits();
+        this->_num = other._num;
 
         return *this;
-}
-
-int    Fixed::getRawBits( void ) const {
-    
-    std::cout << "getRawBits member function called" << std::endl;
-    return (this->_num);
-}
-
-void    Fixed::setRawBits( int const raw ) {
-    
-    this->_num = raw;
-    std::cout << "setRawBits member function called" << std::endl;
 }

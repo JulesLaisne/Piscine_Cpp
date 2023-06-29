@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 14:17:36 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/06/29 09:54:35 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/06/29 09:57:13 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/06/29 10:04:37 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-int main( void ) {
-    
-    Fixed a;
-    Fixed b( a );
-    Fixed c;
-    c = b;
+#include <iostream>
 
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
-    return 0;
-}
+class Fixed
+{
+    private:
+
+        int const        _num;
+        static const int _constNum;
+        
+    public:
+
+        Fixed( void );
+        Fixed( int const num );
+        Fixed( float const num );
+        Fixed( Fixed const & i );
+        ~Fixed();
+        Fixed& operator=(const Fixed& other);
+
+        
+};
+
+
+#endif

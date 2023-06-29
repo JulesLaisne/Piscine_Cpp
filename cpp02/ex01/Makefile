@@ -8,7 +8,7 @@ BUILD_DIR = build/
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:%.cpp=$(BUILD_DIR)%.o)
 HEADER = $(wildcard *.hpp)
-NAME = canon
+NAME = canon01
 
 all: mkbuild $(HEADER_DIR) $(NAME)
 
