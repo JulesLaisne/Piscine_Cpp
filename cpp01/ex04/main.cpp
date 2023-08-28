@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 13:28:32 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/05/24 16:26:30 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/07/25 17:25:38 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,17 @@
 #include <iostream>
 #include <cstddef>
 
+std::string replace_line(std::string line, int found, int len_s1, std::string s2) {
+
+    line.erase(found, len_s1);
+    line.insert(found, s2);
+
+    return line;
+}
+
 int main(int argc, char **argv){
 
-    if (argc == 4){
+    if (argc == 4) {
         
         std::fstream fin;
         std::string  line;
@@ -46,14 +54,18 @@ int main(int argc, char **argv){
         while (getline(fin, line))
         {
             found = line.rfind(s1);
-            if (found != std::string::npos)
-                fout << line.replace(found, s1.length(), s2) << std::endl;
-            else
-                fout << line << std::endl;
+            while (found != std::string::npos)
+            {
+                found = line.find(s1);
+                if (found != std::string::npos)
+                    line = replace_line(line, found, s1.length(), s2);
+            }
+            fout << line << std::endl;
         }
         fin.close();
     }
     else
         std::cout << "Invalid number of arguments." << std::endl;
+
     return 0;
 }

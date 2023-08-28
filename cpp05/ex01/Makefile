@@ -7,11 +7,12 @@ RM = rm -rf
 BUILD_DIR = build/
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:%.cpp=$(BUILD_DIR)%.o)
-NAME = Sed04
+HEADER = $(wildcard *.hpp)
+NAME = Bureaucrat01
 
 all: mkbuild $(HEADER_DIR) $(NAME)
 
-$(BUILD_DIR)%.o: %.cpp Makefile
+$(BUILD_DIR)%.o: %.cpp Makefile $(HEADER)*
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
