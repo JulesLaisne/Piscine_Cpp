@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ShrubberyCreationFrom.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/20 16:49:38 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 13:53:07 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/08/28 10:57:04 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/08/28 13:52:09 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
+
 #include "Form.hpp"
 
-int main( void ) {
+class ShrubberyCreationForm : public Form {
 
-    try {
-        
-        Bureaucrat bureaucrat("Jules",11);
-        Form form("Permis", 10, 1);
+    private:
 
-        bureaucrat.signForm(form);
+        std::string _target;
 
-        std::cout << form << std::endl;
-    } 
-    catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
-    }
-    
-}
+    public:
+
+        ShrubberyCreationForm( const std::string& target );
+        ~ShrubberyCreationForm();
+        ShrubberyCreationForm( const ShrubberyCreationForm& cpy );
+
+        ShrubberyCreationForm& operator=( const ShrubberyCreationForm& other );
+};
+
+#endif

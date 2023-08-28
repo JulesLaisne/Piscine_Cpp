@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:24 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/21 15:07:11 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/08/28 13:57:38 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Form {
         int         getGradeToSign() const;
         int         getGradeToExe() const;
     
-        Form(const Form& cpy);
+        Form( const Form& cpy );
         Form& operator=( const Form& other );
 
         void    beSigned(const Bureaucrat& bureaucrat);

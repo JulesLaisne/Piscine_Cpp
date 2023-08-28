@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 13:57:07 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/27 14:07:18 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/08/28 13:52:13 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ class PresidentialPardonForm : public Form {
         PresidentialPardonForm( const PresidentialPardonForm& cpy );
 
         PresidentalPardonForm& operator=( const PresidentialPardonForm& other );
-}
+};
 
 #endif
