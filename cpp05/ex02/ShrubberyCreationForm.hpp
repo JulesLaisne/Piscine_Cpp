@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationFrom.hpp                          :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 10:57:04 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/08/28 13:52:09 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/08/30 14:44:41 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 #include "Form.hpp"
+#include <fstream>
 
 class ShrubberyCreationForm : public Form {
 
@@ -28,6 +29,7 @@ class ShrubberyCreationForm : public Form {
         ShrubberyCreationForm( const ShrubberyCreationForm& cpy );
 
         ShrubberyCreationForm& operator=( const ShrubberyCreationForm& other );
+        void    execute( const Bureaucrat& executor ) const;
 };
 
 #endif

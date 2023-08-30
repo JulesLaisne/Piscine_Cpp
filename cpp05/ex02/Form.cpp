@@ -6,7 +6,7 @@
 /*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:08 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/21 15:09:46 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/08/30 14:22:26 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,6 @@ void    Form::beSigned( const Bureaucrat& bureaucrat ) {
 std::ostream& operator<<( std::ostream& os, const Form& form ) {
 
     os << form.getName() << " is a form that needs a minimum grade of " \
-        << form.getGradeToSign() << " and " << form.getGradeToExe() << " to execute." << "Its signed status is " << form.getSigned() << std::endl;
+        << form.getGradeToSign() << " and " << form.getGradeToExe() << " to execute." << "Its signed status is " << form.getSigned() << ".";
     return os;
 }

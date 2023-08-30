@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:24 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 13:53:13 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/08/30 14:52:45 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,12 @@ class Form {
                     return _error;
                 }
                 
+        };
+
+        class FormNotSignedException : public std::exception {
+            
+            public:
+                virtual const char* what() const throw() { return "Form is not signed by accredited Bureaucrat"; }
         };
     
 };
