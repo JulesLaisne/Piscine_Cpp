@@ -4,10 +4,12 @@ CC = g++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
 
+SRC_DIR = src/
+HEADER_DIR = includes/
 BUILD_DIR = build/
-SRCS = $(wildcard *.cpp)
+SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(SRCS:%.cpp=$(BUILD_DIR)%.o)
-HEADER = $(wildcard *.hpp)
+HEADER = $(wildcard $(HEADER_DIR)*.hpp)
 NAME = canon
 
 all: mkbuild $(HEADER_DIR) $(NAME)
