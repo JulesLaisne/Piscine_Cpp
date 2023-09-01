@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:59:30 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/08/31 14:05:32 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/01 10:06:36 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 # include <iostream>
 # include <string>
+# include <stdint.h>
+
+struct Data {
+
+    std::string location;
+    int         temperature;
+};
 
 class Serializer
 {
@@ -25,12 +32,10 @@ class Serializer
         Serializer(Serializer const & cpy);
         Serializer & operator=(Serializer const & other);
         
-        uniptr_t    serialize(Data *ptr);
-        Data*       deserialize(uniptr_t raw);
-        
-    private:
-        
+        uintptr_t    serialize(Data *ptr);
+        Data*        deserialize(uintptr_t raw);
         
 };
+
 
 #endif
