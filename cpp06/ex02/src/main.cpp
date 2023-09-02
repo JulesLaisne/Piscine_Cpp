@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 10:11:47 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/01 11:05:53 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/02 09:30:48 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void identify( Base &p ) {
 
     try {
     A &a = dynamic_cast<A &>(p);
-     std::cout << "A by ref" << std::endl;
+    std::cout << "A by ref" << std::endl;
     }
     catch (std::bad_cast &bc) {}
     try {
