@@ -1,6 +1,6 @@
 .PHONY:	all clean $(NAME) fclean re mkbuild
 
-CC = g++
+CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
 
@@ -10,7 +10,7 @@ BUILD_DIR = build/
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(SRCS:%.cpp=$(BUILD_DIR)%.o)
 HEADER = $(wildcard $(HEADER_DIR)*.hpp)
-NAME = Harl05
+NAME = btc
 
 all: mkbuild $(HEADER_DIR) $(NAME)
 
