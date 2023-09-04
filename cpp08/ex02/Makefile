@@ -9,11 +9,12 @@ HEADER_DIR = includes/
 BUILD_DIR = build/
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(SRCS:%.cpp=$(BUILD_DIR)%.o)
-NAME = Type
+HEADER = $(wildcard $(HEADER_DIR)*.hpp)
+NAME = Iterators
 
-all: mkbuild  $(NAME)
+all: mkbuild $(HEADER_DIR) $(NAME)
 
-$(BUILD_DIR)%.o: %.cpp Makefile 
+$(BUILD_DIR)%.o: %.cpp Makefile $(HEADER)*
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
