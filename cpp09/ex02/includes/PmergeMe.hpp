@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/29 13:33:37 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/05 18:00:00 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/09/06 16:05:13 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/09/06 16:06:09 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-# define ICE_HPP
+#ifndef PMERGEME_HPP
+# define PMERGEME_HPP
 
-# include "AMateria.hpp"
-# include "ICharacter.hpp"
+# include <iostream>
+# include <string>
+# include <exception>
+# include <algorithm>
 
-class Ice : public AMateria {
-        
+
+template <typename T>
+
+class PmergeMe
+{
     public:
-    
-        Ice();
-        ~Ice();
-
-        Ice& operator=( const Ice& other );
-        Ice( const Ice& cpy );
-
-        Ice* clone() const;
-        void use( ICharacter& target );
+        PmergeMe();
+        PmergeMe(PmergeMe const & cpy);
+        ~PmergeMe();
+        PmergeMe & operator=(PmergeMe const & other);
 };
 
 #endif

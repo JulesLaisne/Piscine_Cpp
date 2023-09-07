@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/29 12:55:20 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/05 17:59:15 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/09/05 14:45:55 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/09/05 17:57:36 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/AMateria.hpp"
+#include "../includes/Cure.hpp"
 
-AMateria::AMateria( void ) {
+Cure::Cure() : AMateria() {
 
+    _type = "cure";
 }
 
-AMateria::AMateria(std::string const & type) : _type(type) {
+Cure::~Cure() {
 }
 
-AMateria::~AMateria() {
+Cure::Cure( const Cure& cpy ) : AMateria(cpy) {
+    
 }
 
-AMateria::AMateria ( const AMateria& cpy ) : _type(cpy.getType()) {
-}
-
-AMateria& AMateria::operator=( const AMateria& other ){
+Cure& Cure::operator=( const Cure& other ) {
 
     if (this != &other) {
         this->_type = other._type;
@@ -33,13 +32,12 @@ AMateria& AMateria::operator=( const AMateria& other ){
     return *this;
 }
 
-std::string const &  AMateria::getType() const {
+Cure* Cure::clone() const {
 
-    return _type;
+    return (new Cure());
 }
 
-void    AMateria::use( ICharacter& target ) {
-    
-    (void)target;
-    return ;
+void    Cure::use( ICharacter& target ) {
+
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

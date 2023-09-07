@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 14:17:30 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/08/28 16:43:29 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/06 16:17:26 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Fixed::Fixed( void ) {
     
     this->_num = 0;
-    this->_constNum = 8;
     std::cout << "Default constructor called" << std::endl;
 }
 
