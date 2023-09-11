@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Rpn.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:09:58 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/07 17:35:35 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/11 15:25:57 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 # define RPN_HPP
 
 # include <iostream>
-# include <iostream>
+# include <sstream>
 # include <list>
 # include <vector>
 # include <string>
-# include <bits/stdc++.h>
 # include <exception>
 
 class Rpn {
@@ -30,6 +29,13 @@ class Rpn {
         ~Rpn();
 
         Rpn & operator=( Rpn const & other );
+
+        int     calculate( int a, int b, std::string op );
+    
+        int     multiply( int a, int b );
+        int     divide( int a, int b );
+        int     add( int a, int b );
+        int     substract( int a, int b );
 
         class Error : public std::exception {
             
