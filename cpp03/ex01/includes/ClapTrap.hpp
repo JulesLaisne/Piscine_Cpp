@@ -6,7 +6,7 @@
 /*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 14:05:02 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/12 12:32:10 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/18 14:56:48 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class ClapTrap
     protected:
     
         std::string     _name;
-        unsigned int    _HitPoints;
-        unsigned int    _EnergyPoints;
-        unsigned int    _AttackDamage;
+        unsigned int    _hitPoints;
+        unsigned int    _energyPoints;
+        unsigned int    _attackDamage;
 
     public:
     

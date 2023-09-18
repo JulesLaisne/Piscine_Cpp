@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 14:09:55 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:47:13 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/18 15:22:31 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ClapTrap::~ClapTrap() {
 ClapTrap::ClapTrap(const ClapTrap &cpy)
 {
     *this = cpy;
-    std::cout << "[ ClapTrap ] - " << this->_name << " has been copied with copy constuctor." << std::endl;
+    std::cout << "ClapTrap " << this->_name << " has been copied with copy constuctor." << std::endl;
     return;
 }
 
@@ -35,7 +35,7 @@ ClapTrap&   ClapTrap::operator=( const ClapTrap& other ) {
     this->_hitPoints = other._hitPoints;
     this->_energyPoints = other._energyPoints;
     this->_attackDamage = other._attackDamage;
-    std::cout << "[ ClapTrap ] - " << this->_name << " has been copied with copy assignment operator." << std::endl;
+    std::cout << "ClapTrap " << this->_name << " has been copied with copy assignment operator." << std::endl;
     return *this;
 }
 

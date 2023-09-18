@@ -6,18 +6,16 @@
 /*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:08:22 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/11 15:53:56 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/12 12:15:09 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Rpn.hpp"
 
-void    init( char *arg ) {
+void    init( char *arg, std::list<int> &lst, Rpn &calc ) {
     
     std::stringstream   str(arg);
     std::string         word;
-    Rpn                 calc;
-    std::list<int>      lst;
     int                 temp;
     int                 toCalc;
     int                 result;
@@ -52,7 +50,9 @@ int main( int argc, char **argv ) {
     if (argc != 2)
         return std::cout << "Wrong number of arguments" << std::endl, 1;
     try {
-        init(argv[1]);
+        Rpn                 calc;
+        std::list<int>      lst;
+        init(argv[1], lst, calc);
     }
     catch (std::exception &e) {
         std::cout << e.what() << std::endl;

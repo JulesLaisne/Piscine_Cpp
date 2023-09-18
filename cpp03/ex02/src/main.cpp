@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 14:04:38 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:47:25 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/18 15:23:05 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 int main() {
 
-    ScavTrap Jules("Test");
+    FlagTrap Jules("Test");
     
+    Jules.attack( "himself" );
+    Jules.takeDamage( 10 );
+    Jules.beRepaired( 10 );
+    for (int i = 0; i < 4; i++)
+        Jules.highFivesGuys();
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 14:04:38 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:45:29 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/18 14:55:07 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,19 @@
 
 int main() {
 
-    ClapTrap Jules("");
+    ClapTrap Jules("Jules");
+    Jules.attack(" himself");
+    Jules.attack(" himself again");
     
+    ClapTrap JulesNew(Jules);
+    
+    JulesNew.attack(" himself 1 ");
+    JulesNew.attack(" himself 2 ");
+    JulesNew.attack(" himself 3 ");
+    JulesNew.attack(" himself 4 ");
+    JulesNew.attack(" himself 5 ");
+    JulesNew.attack(" himself 6 ");
+    JulesNew.attack(" himself 7 ");
+    JulesNew.attack(" himself 8 ");
+    JulesNew.attack(" himself 9 ");
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 10:57:23 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:46:11 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/18 15:04:21 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
-    this->_HitPoints = 100;
-    this->_EnergyPoints = 50;
-    this->_AttackDamage = 20;
+    this->_hitPoints = 100;
+    this->_energyPoints = 50;
+    this->_attackDamage = 20;
     std::cout << "Scav Constructor called" << std::endl;
 }
 
@@ -27,10 +27,10 @@ ScavTrap::~ScavTrap() {
 
 void    ScavTrap::attack(const std::string& target) {
 
-    if (this->_EnergyPoints > 0)
+    if (this->_energyPoints > 0)
     {
-        this->_EnergyPoints -= 1;
-        std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_AttackDamage << " points of damage!" << std::endl;
+        this->_energyPoints -= 1;
+        std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
     }
     else
         std::cout << "ScavTrap " << this->_name << " is out of energy." << std::endl;
@@ -39,8 +39,10 @@ void    ScavTrap::attack(const std::string& target) {
 
 void    ScavTrap::guardGate( void ) {
 
-    if (this->_EnergyPoints <= 0)
-        std::cout << this->_name << "is out of energy!" << std::endl;
-    this->_EnergyPoints -= 1;
-    std::cout << this->_name << "entered Gate Keeper mode." << std::endl;
+    if (this->_energyPoints <= 0)
+        std::cout << this->_name << " is out of energy!" << std::endl;
+    else {
+        this->_energyPoints -= 1;
+        std::cout << this->_name << " entered Gate Keeper mode." << std::endl;
+    }
 }
