@@ -16,10 +16,10 @@ all: mkbuild $(HEADER_DIR) $(NAME)
 
 $(BUILD_DIR)%.o: %.cpp Makefile $(HEADER)*
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $@
+	$(CC) $(FLAGS) $(OBJS) -o $@
 
 mkbuild:
 		@mkdir -p build
