@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 13:21:14 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:51:34 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/19 14:30:42 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,14 @@ int main() {
 
     const Animal* cat = new Cat();
     cat->makeSound();
-
+        
     delete dog;
     delete cat;
+
+    Dog tmp;
+    Dog basic = tmp;
+
+    basic.getBrain()->printIdeas();
 
     return 0;
 }
