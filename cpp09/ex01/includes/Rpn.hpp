@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Rpn.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:09:58 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/11 15:25:57 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 14:06:04 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <vector>
 # include <string>
 # include <exception>
+# include <cstdlib>
 
 class Rpn {
     

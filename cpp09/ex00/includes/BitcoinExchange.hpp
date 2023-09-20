@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 14:40:18 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/13 21:12:06 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 14:34:07 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <sstream>
 # include <ctime>
 # include <map>
+# include <cstdlib>
 
 class BitcoinExchange {
 

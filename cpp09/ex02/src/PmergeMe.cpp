@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pmergeme.cpp                                       :+:      :+:    :+:   */
+/*   PmergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:19:57 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/19 15:14:54 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 14:05:07 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ PmergeMe& PmergeMe::operator=(PmergeMe const & other ) {
     if (this != &other)
     {
         this->_vector = other._vector;
-        this->_leftArray = other._leftArray;
-        this->_rightArray = other._rightArray;
     }
     return *this;
 }

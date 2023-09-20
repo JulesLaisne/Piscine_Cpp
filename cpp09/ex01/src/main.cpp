@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:08:22 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/12 12:15:09 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 14:06:14 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void    init( char *arg, std::list<int> &lst, Rpn &calc ) {
         if (word.length() != 1)
             throw Rpn::Error();
         if (word[0] > 47 && word[0] < 58 ) {
-            temp = std::stoi(word);
+            temp = std::atoi(word.c_str());
             lst.push_back(temp);
         }
         else if ( lst.size() >= 2 ) {
