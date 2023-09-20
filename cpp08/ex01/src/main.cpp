@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 08:57:17 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/04 11:35:33 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 15:17:11 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,12 @@ int main ( void ) {
         std::cout << Tab.longestSpan() << std::endl;
         std::cout << Tab.shortestSpan() << std::endl;
 
-        std::vector<int>    vec = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        std::vector<int> vec;
+        vec.push_back(5);
+        vec.push_back(2);
+        vec.push_back(33);
+        vec.push_back(4);
+        vec.push_back(1);
         Tab.addMultipleNumber( vec.begin(), vec.end() );
     }
     

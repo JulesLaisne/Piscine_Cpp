@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 13:13:15 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/04 08:53:09 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 15:15:13 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define EASYFIND_HPP
 
 #include <algorithm>
-#include <array>
 #include <list>
 #include <exception>
 #include <iostream>
@@ -34,11 +33,7 @@ void    easyfind( T containers, int n ) {
     if (it == containers.end())
         throw NoMatchFound();
     else
-        std::cout << "Match found in containers." << std::endl;
-
-    // std::find(containers.begin(), containers.end(), n) == std::end(containers) 
-    //     ? std::cout << "v does not contain " << n << '\n'
-    //     : std::cout << "v contains " << n << '\n';   
+        std::cout << "Match found in containers." << std::endl; 
 }
 
 #endif

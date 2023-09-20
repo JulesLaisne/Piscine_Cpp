@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 09:49:42 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/02 13:10:31 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 15:30:34 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <exception>
-
 
 template <typename T>
 class Array {
@@ -69,11 +68,7 @@ class Array {
                 throw OutOfUpperLimits();
             return _tab[i];
         }
-
-
         unsigned int size( void ) const { return _size; }
-    
-    
 };
 
 #endif
