@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 13:20:17 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:50:05 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:43:32 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,9 @@ std::string Animal::getType( void ) const {
 void    Animal::makeSound( void ) const {
     
     std::cout << this->type << " make sound called." << std::endl;
+}
+
+Brain * Animal::getBrain( void ) const {
+
+    return NULL;
 }

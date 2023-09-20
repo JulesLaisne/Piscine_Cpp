@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 09:20:52 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/08/31 14:02:46 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 09:03:20 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int main(int argc, char **argv)
         std::cout << "Error: Wrong number of arguments" << std::endl;
         return 1;
     }
-    ScalarConverter converter(argv[1]);
+    ScalarConverter::convert(argv[1]);
     return 0;
 }

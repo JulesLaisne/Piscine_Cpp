@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 09:30:37 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/08/31 13:42:11 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 09:54:31 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,23 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <sstream>
 
 class ScalarConverter {
-    private:
-        
-        int     _valueInt;
-        float   _valueFloat;
-        double  _valueDouble;
-        char    _valueChar;
         
     public:
 
         ScalarConverter();
         ~ScalarConverter();
 
-        ScalarConverter(std::string value);
         ScalarConverter(ScalarConverter const & src);
         ScalarConverter & operator=(ScalarConverter const & src);
         
-        char    toChar(std::string value);
-        int     toInt(std::string value);
-        float   toFloat(std::string value);
-        double  toDouble(std::string value);
+        static void convert( std::string value );
+        static void    toChar(std::string value);
+        static void toInt(std::string value);
+        static void toFloat(std::string value);
+        static void toDouble(std::string value);
         
 };
 

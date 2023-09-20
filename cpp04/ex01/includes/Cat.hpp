@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:10:42 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/15 16:09:30 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 10:42:53 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class Cat : public Animal {
         Cat( const Cat& cpy );
         Cat& operator=( const Cat& other );
 
+        Brain * getBrain( void ) const;
         void makeSound( void ) const;
   
 };

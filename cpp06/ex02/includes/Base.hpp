@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 14:02:51 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/20 10:43:01 by jlaisne          ###   ########.fr       */
+/*   Created: 2023/09/20 10:01:48 by jlaisne           #+#    #+#             */
+/*   Updated: 2023/09/20 10:32:56 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef BASE_HPP
+# define BASE_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include <iostream>
+# include <exception>
+# include <cstdlib>
 
-class Dog : public Animal {
-    
-    private:
-
-        Brain* brain;
-        
-    public:
-
-        Dog();
-        ~Dog();
-        Dog& operator=( const Dog& other );
-        Dog ( const Dog& cpy );
-
-        void makeSound( void ) const;
-        Brain * getBrain( void ) const;
-};
+class Base {  public : virtual ~Base() {};};
+class A : public Base {};
+class B : public Base {};
+class C : public Base {};
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:59:15 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/01 10:10:40 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 08:48:14 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int main ( void ) {
     std::cout << "Temperature: " << data->temperature << std::endl;
     
     std::cout << "================" << std::endl;
-
-    Serializer serializer;
-    uintptr_t serialized = serializer.serialize(data);
-    Data *deserialized = serializer.deserialize(serialized);
+    
+    uintptr_t serialized = Serializer::serialize(data);
+    
+    Data *deserialized = Serializer::deserialize(serialized);
     
     std::cout << "Location: " << deserialized->location << std::endl;
     std::cout << "Temperature: " << deserialized->temperature << std::endl;

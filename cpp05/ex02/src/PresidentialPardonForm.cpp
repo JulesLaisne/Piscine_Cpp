@@ -6,13 +6,13 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 13:57:15 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/31 09:07:21 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 11:00:14 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm( const std::string& target ) : _target(target), Form("Presidential Pardon Form", 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm( const std::string& target ) : Form("Presidential Pardon Form", 25, 5),  _target(target) {
     
     std::cout << "Constructor Called." << std::endl;
 }

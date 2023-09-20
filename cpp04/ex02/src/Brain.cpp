@@ -6,17 +6,21 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 16:31:44 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/31 09:42:06 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:47:06 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Brain.hpp"
+#include <sstream>
 
 Brain::Brain( void ) {
     
+    std::stringstream ss;
     std::cout << "Brain constructor called." << std::endl;
     for ( int i = 0; i < 100; i++ ) {
-        this->ideas[i] = "Idea number " + std::to_string(i);
+        ss << i;
+        this->ideas[i] = "Idea number " + ss.str() + " of the brain.";
+        ss.str(std::string());
     }
 }
 

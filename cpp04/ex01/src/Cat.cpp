@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:12:55 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:50:15 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:42:45 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ Cat& Cat::operator=( const Cat& other ) {
         this->brain = new Brain ( *other.brain );
     }
     return *this;
+}
+
+Brain * Cat::getBrain( void ) const {
+
+    return this->brain;
 }

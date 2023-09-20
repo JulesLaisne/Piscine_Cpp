@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:02:29 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:50:24 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:42:38 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,9 @@ Dog& Dog::operator=( const Dog& other ) {
     }
     return *this;
 }
+
+Brain * Dog::getBrain( void ) const {
+
+    return this->brain;
+}
+

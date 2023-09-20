@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 16:27:50 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/31 09:41:54 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:19:49 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BRAIN_HPP
 
 #include <iostream>
+#include <string>
 
 class Brain {
 

@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 13:20:17 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:48:28 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:17:56 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Animal& Animal::operator=( const Animal& other )
 {
     std::cout << "Animal assignment operator called" << std::endl;
     if ( this != &other ) {
-        this->_type = other._type;
+        this->type = other.type;
     }
     return *this;
 }

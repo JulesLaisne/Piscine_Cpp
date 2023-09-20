@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 10:32:28 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/06 11:01:02 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 11:01:45 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ Form* Intern::makeShrubberyCreationForm( std::string const & target ) {
 
 Form* Intern::makeForm( std::string const & formName, std::string const & target ) {
 
-    int i = 0;
     std::string forms[3] = {"presidential pardon", "robotomy request", "shrubbery creation"};
     Form* (Intern::*member[3])(std::string const & target) = {
         &Intern::makePresidentialPardonForm,

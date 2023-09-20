@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 13:17:47 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/12 12:42:59 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 10:43:39 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class Animal {
 
         std::string getType( void ) const;
         virtual void makeSound( void ) const;
+        virtual class Brain * getBrain( void ) const;
 };
 
 

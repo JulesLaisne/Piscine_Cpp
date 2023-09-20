@@ -6,13 +6,13 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 10:57:06 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/06 10:57:08 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 11:01:59 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm( const std::string& target ) : _target(target), Form("Robotomy Request Form", 72, 45) {
+RobotomyRequestForm::RobotomyRequestForm( const std::string& target ) : Form("Robotomy Request Form", 72, 45), _target(target) {
     
 }
 

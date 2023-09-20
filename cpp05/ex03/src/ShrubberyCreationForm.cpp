@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 10:56:59 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/06 10:57:14 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 11:01:24 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,49 +44,49 @@ void ShrubberyCreationForm::execute( const Bureaucrat& exec ) const {
 
         output = _target;
         output.append("_shrubbery");
-        std::ofstream fout(output);                                                                                                                                                                                                  
+        std::ofstream fout(output.c_str());                                                                                                                                                                                                  
         for (int i = 0; i < 5; i++) {                                                                                                                                
-        fout << "                                        " << std::endl;
-        fout << "                                        " << std::endl;                   
-        fout << "            ++=+==+         "            << std::endl    ;
-        fout << "      == ++========++++-        "         << std::endl  ;
-        fout << "     +++++++========+++=          "       << std::endl  ;
-        fout << "    ++++++++++++=++++==            "     << std::endl  ;
-        fout << "   +==++==+++++++++++===++            "     << std::endl ;
-        fout << "   ===========+++========+             "    << std::endl ;
-        fout << " +============+++========+              "   << std::endl ;
-        fout << " +===++++++++=+++++++++=+++=             "  << std::endl  ;
-        fout << " ==+++++++==++++++++++++++=               "  << std::endl;
-        fout << " +=++*+==========++++=+*+**+:+*++====+     "  << std::endl;
-        fout << " ++++++=========++++===++*+===++++====+     " << std::endl;
-        fout << "    ===++=++=++*+++++++*++=====++===++++   " << std::endl;
-        fout << "     ++++*#**#*******#*+++=====++++++*++   " << std::endl;
-        fout << "      ++* +#* .+=       +*+==+++++++++=+   " << std::endl;
-        fout << " ==+                   ***#*++++==+====    " << std::endl;
-    fout << "  ++=====++                 ##***+========+    " << std::endl;
-    fout << " ++=====+++=+                #***#*+++==++      " << std::endl;
-   fout << " ++====++++=====                 #***++          " << std::endl;
-   fout << " +++++++++++=+++*                                " << std::endl;
-   fout << " +=++====++++#**    * :*                         " << std::endl;
-  fout << " ++=++=====+**##     #*##        =++++==          " << std::endl;
-    fout << " ++====++**-      #*##       +++=======+       " << std::endl;
-    fout << "  +==++ .*        -####      +=+++======       " << std::endl;
-    fout << "                * *##%#   ***+=++++++=+.       " << std::endl;
-    fout << "                  ###%     #*+++=====++=       " << std::endl;
-    fout << "                  .*#%       .*+++=+.          " << std::endl;
-    fout << "                   *#%#                        " << std::endl;
-    fout << "                   ####                        " << std::endl;
-    fout << "                    ##%                        " << std::endl;
-    fout << "                    *##                        " << std::endl;
-    fout << "                    *##                        " << std::endl;
-    fout << "                    ###                        " << std::endl;
-    fout << "                    **#                        " << std::endl;
-    fout << "                    ***#                       " << std::endl;
-    fout << "                    **#*                        " << std::endl;
-    fout << "                                               " << std::endl;
-    fout << "                                                " << std::endl;
-    fout << "                                                " << std::endl;
-    fout << "                                                "  << std::endl;                                                                  
+        fout << "                                        "              << std::endl;
+        fout << "                                        "              << std::endl;                   
+        fout << "            ++=+==+         "                          << std::endl;
+        fout << "      == ++========++++-        "                      << std::endl;
+        fout << "     +++++++========+++=          "                    << std::endl;
+        fout << "    ++++++++++++=++++==            "                   << std::endl;
+        fout << "   +==++==+++++++++++===++            "                << std::endl;
+        fout << "   ===========+++========+             "               << std::endl;
+        fout << " +============+++========+              "              << std::endl;
+        fout << " +===++++++++=+++++++++=+++=             "             << std::endl;
+        fout << " ==+++++++==++++++++++++++=               "            << std::endl;
+        fout << " +=++*+==========++++=+*+**+:+*++====+     "           << std::endl;
+        fout << " ++++++=========++++===++*+===++++====+     "          << std::endl;
+        fout << "    ===++=++=++*+++++++*++=====++===++++   "           << std::endl;
+        fout << "     ++++*#**#*******#*+++=====++++++*++   "           << std::endl;
+        fout << "      ++* +#* .+=       +*+==+++++++++=+   "           << std::endl;
+        fout << "   ==+                   ***#*++++==+====    "         << std::endl;
+        fout << "  ++=====++                 ##***+========+    "       << std::endl;
+        fout << " ++=====+++=+                #***#*+++==++      "      << std::endl;
+        fout << " ++====++++=====                 #***++          "     << std::endl;
+        fout << " +++++++++++=+++*                                "     << std::endl;
+        fout << " +=++====++++#**    * :*                         "     << std::endl;
+        fout << " ++=++=====+**##     #*##        =++++==          "    << std::endl;
+        fout << " ++====++**-      #*##       +++=======+       "       << std::endl;
+        fout << "  +==++ .*        -####      +=+++======       "       << std::endl;
+        fout << "                * *##%#   ***+=++++++=+.       "       << std::endl;
+        fout << "                  ###%     #*+++=====++=       "       << std::endl;
+        fout << "                  .*#%       .*+++=+.          "       << std::endl;
+        fout << "                   *#%#                        "       << std::endl;
+        fout << "                   ####                        "       << std::endl;
+        fout << "                    ##%                        "       << std::endl;
+        fout << "                    *##                        "       << std::endl;
+        fout << "                    *##                        "       << std::endl;
+        fout << "                    ###                        "       << std::endl;
+        fout << "                    **#                        "       << std::endl;
+        fout << "                    ***#                       "       << std::endl;
+        fout << "                    **#*                        "      << std::endl;
+        fout << "                                               "       << std::endl;
+        fout << "                                                "      << std::endl;
+        fout << "                                                "      << std::endl;
+        fout << "                                                "      << std::endl;                                                                 
         }
     }
 }

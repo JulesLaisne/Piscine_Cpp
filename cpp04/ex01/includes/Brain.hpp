@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 16:27:50 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/15 15:45:56 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 10:41:51 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Brain {
 
         Brain& operator=( const Brain& other );
         Brain( const Brain& cpy );
+        void printIdeas( void ) const;
 
 };
 

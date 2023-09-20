@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:08 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:52:59 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:54:54 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Form::~Form( void ) {
     std::cout << "Destructor called" << std::endl;
 }
 
-Form::Form( const Form& cpy ) : _name(cpy._name), _gradeToExe(cpy._gradeToExe), _gradeToSign(cpy._gradeToSign), _signed(cpy._signed) {
+Form::Form( const Form& cpy ) : _name(cpy._name), _signed(cpy._signed), _gradeToSign(cpy._gradeToSign),  _gradeToExe(cpy._gradeToExe) {
 
     std::cout << "Copy constructor called" << std::endl;
 }

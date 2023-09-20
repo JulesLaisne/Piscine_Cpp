@@ -6,26 +6,20 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 10:11:47 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/02 09:30:48 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 10:55:25 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <random>
-
-class Base {  public : virtual ~Base() {};};
-class A : public Base {};
-class B : public Base {};
-class C : public Base {};
+#include "../includes/Base.hpp"
 
 Base * generate( void ) {
 
-    int random = rand() % 3;
+    int random = std::rand() % 3;
     if (random == 0)
-        return (new A);
+        return (std::cout << "A generated."<< std::endl, new A);
     if (random == 1)
-        return (new B);
-    return (new C);
+        return (std::cout << "B generated." << std::endl, new B);
+    return (std::cout << "C generated." << std::endl, new C);
 }
 
 void identify( Base *p ) {
@@ -44,20 +38,20 @@ void identify( Base *p ) {
 void identify( Base &p ) {
 
     try {
-    A &a = dynamic_cast<A &>(p);
-    std::cout << "A by ref" << std::endl;
+        A &a = dynamic_cast<A &>(p);
+        std::cout << "A by ref: " << &a << std::endl;
     }
-    catch (std::bad_cast &bc) {}
+    catch ( ... ) { }
     try {
-    B &b = dynamic_cast<B &>(p);
-    std::cout << "B by ref" << std::endl;
+        B &b = dynamic_cast<B &>(p);
+        std::cout << "B by ref: " << &b << std::endl;
     }
-    catch (std::bad_cast &bc) {}
+    catch ( ... ) { }
     try {
-    C &c = dynamic_cast<C &>(p);
-    std::cout << "C by ref" << std::endl;
+        C &c = dynamic_cast<C &>(p);
+        std::cout << "C by ref: " << &c << std::endl;
     }
-    catch (std::bad_cast &bc) {}
+    catch ( ... ) { }
 }
 
 int main ( void ) {
@@ -95,4 +89,4 @@ int main ( void ) {
     Base *base9 = generate();
     identify(base9);
     identify(*base9);
-    }
+}

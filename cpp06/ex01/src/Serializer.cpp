@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:03:01 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/01 10:07:03 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 08:46:59 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ Serializer::Serializer() {
 Serializer::~Serializer() {
 }
 
-Serializer::Serializer(std::string value) {
-}
-
 Serializer::Serializer(Serializer const & cpy) {
     
     *this = cpy;
@@ -28,6 +25,9 @@ Serializer::Serializer(Serializer const & cpy) {
 
 Serializer& Serializer::operator=( const Serializer& other ) {
 
+    if (this != &other) {
+        *this = other;
+    }
     return *this;
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 13:21:14 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/19 14:30:42 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/20 10:51:32 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ int main() {
     Dog basic = tmp;
 
     basic.getBrain()->printIdeas();
+
+    // const Animal* j = new Animal();
+    // j->makeSound();
 
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:08 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/06 10:56:14 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 11:00:53 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Form::~Form( void ) {
     
 }
 
-Form::Form( const Form& cpy ) : _name(cpy._name), _gradeToExe(cpy._gradeToExe), _gradeToSign(cpy._gradeToSign), _signed(cpy._signed) {
+Form::Form( const Form& cpy ) : _name(cpy._name),_signed(cpy._signed), _gradeToSign(cpy._gradeToSign),  _gradeToExe(cpy._gradeToExe) {
 
 }
 
