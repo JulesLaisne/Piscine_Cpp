@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:05:13 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/27 14:08:14 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/27 14:20:02 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # include <deque>
 # include <sstream>
 # include <ctime>
+# include <climits>
+# include <cstring>
 
 class InvalidValueException : public std::exception
 {
@@ -154,17 +156,17 @@ void sort( T& arr ) {
 
        int middle = arr.size() / 2;
 
-    // create two subarrays in which you copy the elements
-        T leftA(arr.begin(), advance_it(arr.begin(), middle));
+    
+        T leftA(arr.begin(), advance_it(arr.begin(), middle));    
         T rightA(advance_it(arr.begin(), middle), arr.end());
 
-        sort(arr);
-        sort(arr);
+        sort(leftA);
+        sort(rightA);
         merge(arr, leftA, rightA);
 
     } 
     else {
-
+        
         insertionSort(arr);
     }
 }
