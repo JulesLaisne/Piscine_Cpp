@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:02:51 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/07/05 14:12:39 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/25 09:57:12 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ class Dog : public Animal {
 
         Dog();
         ~Dog();
+
+        Dog(const Dog& cpy);
+        Dog& operator=( const Dog& other );
 
         void makeSound( void ) const;
 };

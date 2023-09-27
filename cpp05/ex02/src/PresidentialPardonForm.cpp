@@ -6,13 +6,13 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 13:57:15 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/20 11:00:14 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 15:02:31 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm( const std::string& target ) : Form("Presidential Pardon Form", 25, 5),  _target(target) {
+PresidentialPardonForm::PresidentialPardonForm( const std::string& target ) : AForm("Presidential Pardon Form", 25, 5),  _target(target) {
     
     std::cout << "Constructor Called." << std::endl;
 }
@@ -22,7 +22,7 @@ PresidentialPardonForm::~PresidentialPardonForm() {
     std::cout << "Destructor Called." << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& cpy ) : Form(cpy), _target(cpy._target) {
+PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& cpy ) : AForm(cpy), _target(cpy._target) {
     
     std::cout << "Copy Constructor Called." << std::endl;
 }
@@ -37,9 +37,9 @@ PresidentialPardonForm& PresidentialPardonForm::operator=( const PresidentialPar
 void PresidentialPardonForm::execute( const Bureaucrat& exec ) const {
 
     if (this->getSigned() == false)
-        throw Form::FormNotSignedException();
+        throw AForm::FormNotSignedException();
     if (exec.getGrade() > this->getGradeToExe())
-        throw Form::GradeTooLowException("Bureaucrat needs an higher rank in order to sign this form.");
+        throw AForm::GradeTooLowException("Bureaucrat needs an higher rank in order to sign this form.");
     else
         std::cout << _target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

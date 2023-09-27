@@ -6,12 +6,12 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 16:49:38 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/06 11:05:11 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 15:06:06 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Bureaucrat.hpp"
-#include "../includes/Form.hpp"
+#include "../includes/AForm.hpp"
 #include "../includes/PresidentialPardonForm.hpp"
 #include "../includes/RobotomyRequestForm.hpp"
 #include "../includes/ShrubberyCreationForm.hpp"
@@ -24,7 +24,7 @@ int main( void ) {
         Intern LeBouffe;
         Bureaucrat Jules("Jules", 5);
 
-        Form* form = LeBouffe.makeForm("presidential pardon", "Michel");
+        AForm* form = LeBouffe.makeForm("presidential pardon", "Michel");
 
         Jules.signForm(*form);
         Jules.executeForm(*form);

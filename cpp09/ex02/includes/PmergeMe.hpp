@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:05:13 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 14:05:01 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 15:32:15 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <string>
 # include <exception>
 # include <algorithm>
-# include <array> 
 # include <vector>
 # include <sstream>
 

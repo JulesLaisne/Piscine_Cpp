@@ -1,6 +1,7 @@
 .PHONY:	all clean $(NAME) fclean re mkbuild
 
-CC = c++
+CC = g++
+
 FLAGS = -Wall -Werror -Wextra -std=c++98
 RM = rm -rf
 

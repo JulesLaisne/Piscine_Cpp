@@ -1,57 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:08 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/20 10:56:51 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 14:49:55 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Form.hpp"
+#include "../includes/AForm.hpp"
 
-Form::Form(const std::string name, int gradeToSign, int gradeToExe) : _name(name), _signed(false), _gradeToSign(gradeToSign), _gradeToExe(gradeToExe) {
+AForm::AForm(const std::string name, int gradeToSign, int gradeToExe) : _name(name), _signed(false), _gradeToSign(gradeToSign), _gradeToExe(gradeToExe) {
 
     if (gradeToSign < 1)
-        throw Form::GradeTooLowException("Grade too low to be assigned as a minimum to sign form.");
+        throw AForm::GradeTooLowException("Grade too low to be assigned as a minimum to sign form.");
     if (gradeToExe < 1)
-        throw Form::GradeTooLowException("Grade too low to be assigned as a form executable.");
+        throw AForm::GradeTooLowException("Grade too low to be assigned as a form executable.");
     if (gradeToSign > 150)
-        throw Form::GradeTooHighException("Grade too high to be assigned as a minimum to sign form.");
+        throw AForm::GradeTooHighException("Grade too high to be assigned as a minimum to sign form.");
     if (gradeToExe > 150)
-        throw Form::GradeTooHighException("Grade too high to be assigned as a form executable.");
+        throw AForm::GradeTooHighException("Grade too high to be assigned as a form executable.");
     std::cout << "Default constructor called" << std::endl;
 }
 
-Form::~Form( void ) {
+AForm::~AForm( void ) {
     
     std::cout << "Destructor called" << std::endl;
 }
 
-Form::Form( const Form& cpy ) : _name(cpy._name), _signed(cpy._signed), _gradeToSign(cpy._gradeToSign), _gradeToExe(cpy._gradeToExe) {
+AForm::AForm( const AForm& cpy ) : _name(cpy._name), _signed(cpy._signed), _gradeToSign(cpy._gradeToSign), _gradeToExe(cpy._gradeToExe) {
 
     std::cout << "Copy constructor called" << std::endl;
 }
 
-std::string Form::getName() const {
+std::string AForm::getName() const {
     return _name;
 }
 
-bool   Form::getSigned() const {
+bool   AForm::getSigned() const {
     return _signed;
 }
 
-int   Form::getGradeToSign() const {
+int   AForm::getGradeToSign() const {
     return _gradeToSign;
 }
 
-int   Form::getGradeToExe() const {
+int   AForm::getGradeToExe() const {
     return _gradeToExe;
 }
 
-Form& Form::operator=(const Form& other) {
+AForm& AForm::operator=(const AForm& other) {
         
         if (this == &other) {
             return *this;
@@ -62,25 +62,25 @@ Form& Form::operator=(const Form& other) {
         return *this;
 }
 
-void    Form::beSigned( const Bureaucrat& bureaucrat ) {
+void    AForm::beSigned( const Bureaucrat& bureaucrat ) {
 
-    if (bureaucrat.getGrade() < _gradeToSign) {
+    if (bureaucrat.getGrade() <= _gradeToSign) {
         _signed = true;
     }
     else
-        throw Form::GradeTooLowException("Bureaucrat's grade isn't high enough to sign");
+        throw AForm::GradeTooLowException("Bureaucrat's grade isn't high enough to sign");
 }
 
-void    Form::execute(Bureaucrat const & executor) const {
+void    AForm::execute(Bureaucrat const & executor) const {
 
     if (executor.getGrade() > _gradeToExe)
-        throw Form::FormNotExecutable();
+        throw AForm::FormNotExecutable();
     if (_signed == false)
-        throw Form::FormNotSignedException();
+        throw AForm::FormNotSignedException();
     return;
 }
 
-std::ostream& operator<<( std::ostream& os, const Form& form ) {
+std::ostream& operator<<( std::ostream& os, const AForm& form ) {
 
     os << form.getName() << " is a form that needs a minimum grade of " \
         << form.getGradeToSign() << " and " << form.getGradeToExe() << " to execute." << "Its signed status is " << form.getSigned() << ".";

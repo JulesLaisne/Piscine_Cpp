@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:24 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/31 09:10:22 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 14:59:53 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
-class Form {
+class AForm {
 
     private:
 
@@ -28,19 +28,19 @@ class Form {
 
     public:
         
-        Form(const std::string name, int gradeToSign, int gradeToExe);
-        ~Form();
+        AForm(const std::string name, int gradeToSign, int gradeToExe);
+        ~AForm();
 
         std::string getName() const;
         bool        getSigned() const;
         int         getGradeToSign() const;
         int         getGradeToExe() const;
     
-        Form(const Form& cpy);
-        Form& operator=( const Form& other );
+        AForm(const AForm& cpy);
+        AForm& operator=( const AForm& other );
 
         void    beSigned(const Bureaucrat& bureaucrat);
-        virtual void    execute(Bureaucrat const & executor) const;
+        virtual void    execute(Bureaucrat const & executor) const = 0;
 
         class GradeTooLowException : public std::exception {
 
@@ -85,6 +85,6 @@ class Form {
     
 };
 
-    std::ostream& operator<<( std::ostream& o, const Form& form );
+    std::ostream& operator<<( std::ostream& o, const AForm& form );
 
 #endif

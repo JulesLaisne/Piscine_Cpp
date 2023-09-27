@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 13:53:33 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/06 13:44:50 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 14:12:58 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Character::~Character() {
     for (int i = 0; i < 4; i++) {
         if (_inventory[i] != NULL)
             delete _inventory[i];
+        if (_dumped[i] != NULL)
+            delete _dumped[i];
     }
     return ;
 }

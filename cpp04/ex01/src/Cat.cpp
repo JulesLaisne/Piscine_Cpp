@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 14:12:55 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/20 10:42:45 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/20 17:43:27 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 Cat::Cat( void ) : Animal("Cat") {
 
     std::cout << this->type << " Constructor called." << std::endl;
+    this->brain = new Brain();
 }
 
 Cat::~Cat( void )
-{
+{   
+    delete this->brain;
     std::cout << this->type << " Destructor called." << std::endl;
 }
 

@@ -13,9 +13,9 @@
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class PresidentialPardonForm : public Form {
+class PresidentialPardonForm : public AForm {
 
     private:
 
@@ -30,8 +30,5 @@ class PresidentialPardonForm : public Form {
         PresidentialPardonForm& operator=( const PresidentialPardonForm& other );
         void execute( const Bureaucrat& exec ) const;
 };
-
-std::ostream& operator<<( std::ostream& o, const PresidentialPardonForm& form );
-
 
 #endif

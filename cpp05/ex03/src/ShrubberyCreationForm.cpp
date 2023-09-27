@@ -6,22 +6,25 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 10:56:59 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 11:01:24 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 14:59:17 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm( const std::string& target ) : Form("Shrubbery Creation Form", 145, 137), _target(target) {
+ShrubberyCreationForm::ShrubberyCreationForm( const std::string& target ) : AForm("Shrubbery Creation Form", 145, 137), _target(target) {
     
+    std::cout << "Constructor Called." << std::endl;
 
 }
 ShrubberyCreationForm::~ShrubberyCreationForm(){
     
+    std::cout << "Destructor Called." << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& cpy) : Form(cpy), _target(cpy._target) {
+ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& cpy) : AForm(cpy), _target(cpy._target) {
     
+    std::cout << "Copy Constructor Called." << std::endl;
 }
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=( const ShrubberyCreationForm& other ) {
@@ -36,9 +39,9 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=( const ShrubberyCreation
 void ShrubberyCreationForm::execute( const Bureaucrat& exec ) const {
 
     if (this->getSigned() == false)
-        throw Form::FormNotSignedException();
+        throw AForm::FormNotSignedException();
     if (exec.getGrade() > this->getGradeToExe())
-        throw Form::GradeTooLowException("Bureaucrat needs an higher rank to execute a Shrubbery creation.");
+        throw AForm::GradeTooLowException("Bureaucrat needs an higher rank to execute a Shrubbery creation.");
     else {
         std::string output;
 
@@ -86,7 +89,7 @@ void ShrubberyCreationForm::execute( const Bureaucrat& exec ) const {
         fout << "                                               "       << std::endl;
         fout << "                                                "      << std::endl;
         fout << "                                                "      << std::endl;
-        fout << "                                                "      << std::endl;                                                                 
+        fout << "                                                "      << std::endl;                                                                  
         }
     }
 }

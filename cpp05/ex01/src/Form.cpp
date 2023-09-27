@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:08 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/20 10:54:54 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 14:48:22 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ Form& Form::operator=(const Form& other) {
 
 void    Form::beSigned( const Bureaucrat& bureaucrat ) {
 
-    if (bureaucrat.getGrade() < _gradeToSign) {
+    if (bureaucrat.getGrade() <= _gradeToSign) {
         _signed = true;
     }
     else

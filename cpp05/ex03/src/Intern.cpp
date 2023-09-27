@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 10:32:28 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 11:01:45 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 15:05:35 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,25 +33,25 @@ Intern& Intern::operator=( const Intern& other ) {
     return *this;
 }
 
-Form* Intern::makePresidentialPardonForm( std::string const & target ) {
+AForm* Intern::makePresidentialPardonForm( std::string const & target ) {
 
     return (new PresidentialPardonForm(target));
 }
 
-Form* Intern::makeRobotomyRequestForm( std::string const & target ) {
+AForm* Intern::makeRobotomyRequestForm( std::string const & target ) {
 
     return (new RobotomyRequestForm(target));
 }
 
-Form* Intern::makeShrubberyCreationForm( std::string const & target ) {
+AForm* Intern::makeShrubberyCreationForm( std::string const & target ) {
 
     return (new ShrubberyCreationForm(target));
 }
 
-Form* Intern::makeForm( std::string const & formName, std::string const & target ) {
+AForm* Intern::makeForm( std::string const & formName, std::string const & target ) {
 
     std::string forms[3] = {"presidential pardon", "robotomy request", "shrubbery creation"};
-    Form* (Intern::*member[3])(std::string const & target) = {
+    AForm* (Intern::*member[3])(std::string const & target) = {
         &Intern::makePresidentialPardonForm,
         &Intern::makeRobotomyRequestForm,
         &Intern::makeShrubberyCreationForm

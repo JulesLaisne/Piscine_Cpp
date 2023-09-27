@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 16:49:38 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/08/28 16:53:09 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/26 14:50:48 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main( void ) {
         Form form("Permis", 10, 1);
         Form form2 = form;
 
+        bureaucrat.PromoteGrade();
         bureaucrat.signForm(form2);
 
         std::cout << form2 << std::endl;
