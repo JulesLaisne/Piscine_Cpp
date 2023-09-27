@@ -6,7 +6,7 @@
 /*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:57:54 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/11 15:51:55 by juleslaisne      ###   ########.fr       */
+/*   Updated: 2023/09/27 21:16:45 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,30 +28,21 @@ Rpn & Rpn::operator=( Rpn const & other ) {
 }
 
 int Rpn::multiply( int a, int b ) {
-    
-    std::cout << a << " mult " << b << std::endl;
     return a * b;
 }
 
 int Rpn::divide( int a, int b ) {
-
-    std::cout << a << " div " << b << std::endl;
     if (b == 0)
         throw Rpn::Error();
     return a / b;
 }
 
-int Rpn::add( int a, int b ) {
-
-    std::cout << a << " add " << b << std::endl;
-    
+int Rpn::add( int a, int b ) {    
     return a + b;
 }
 
 int Rpn::substract( int a, int b ) {
-    
-    std::cout << a << " sub " << b << std::endl;
-    return a - b;
+        return a - b;
 }
 
 int Rpn::calculate(int a, int b, std::string op) {

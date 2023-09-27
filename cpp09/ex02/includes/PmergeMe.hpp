@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 16:05:13 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/27 14:20:02 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/27 17:20:32 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <algorithm>
 # include <vector>
 # include <deque>
+# include <list>
 # include <sstream>
 # include <ctime>
 # include <climits>

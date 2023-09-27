@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Rpn.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: juleslaisne <juleslaisne@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:09:58 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 14:06:04 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/27 21:12:52 by juleslaisne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <sstream>
-# include <list>
+# include <stack>
 # include <vector>
 # include <string>
 # include <exception>
