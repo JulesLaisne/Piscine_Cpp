@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:59:15 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 08:48:14 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/28 10:15:12 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ int main ( void ) {
     std::cout << "================" << std::endl;
     
     uintptr_t serialized = Serializer::serialize(data);
+
+    std::cout << "Serialized: " << serialized << std::endl;
     
+    std::cout << "================" << std::endl;
     Data *deserialized = Serializer::deserialize(serialized);
     
     std::cout << "Location: " << deserialized->location << std::endl;

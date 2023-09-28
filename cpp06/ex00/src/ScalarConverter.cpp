@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 09:31:23 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 14:04:18 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/28 10:13:30 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ void    ScalarConverter::toChar(std::string value) {
         std::cout << "char: " << "'" << value << "'" << std::endl;
     else {
         _valueChar = static_cast<char>(strtod(value.c_str(), &ptr));
-        if (_valueChar >= 32 && _valueChar <=126)
+        if (_valueChar >= 32 && _valueChar <= 126)
             std::cout << "char: " << "'" << _valueChar << "'" << std::endl;
-        else if ((_valueChar >= 0 && _valueChar < 32) || (_valueChar > 126 && _valueChar <= 127))
+        else if ((_valueChar >= 0 && _valueChar < 32) || (_valueChar > 126))
             std::cout << "char: Non displayable" << std::endl;
         else
             std::cout << "char: impossible" << std::endl;
@@ -120,7 +120,7 @@ void   ScalarConverter::toFloat(std::string value) {
     else {
         if (isFloat(value.substr(0, value.length() - 1)) && value.at(value.size() - 1) == 'f') {
             _valueFloat = static_cast<float>(atof(value.c_str()));
-            if (_valueFloat > std::numeric_limits<float>::min() && _valueFloat < std::numeric_limits<float>::max()) {
+            if (_valueFloat > std::numeric_limits<float>::min() - std::numeric_limits<float>::max() && _valueFloat < std::numeric_limits<float>::max()) {
                 std::cout << "float: " << _valueFloat;
                 if (_valueFloat - static_cast<int>(_valueFloat) == 0)
                 std::cout << ".0";
@@ -131,11 +131,11 @@ void   ScalarConverter::toFloat(std::string value) {
         }
         else if (isDouble(value)) {
             _valueFloat = static_cast<float>(atof(value.c_str()));
-            if (_valueFloat > std::numeric_limits<float>::min() && _valueFloat < std::numeric_limits<float>::max()) {
-            std::cout << "float: " << _valueFloat;
-            if (_valueFloat - static_cast<int>(_valueFloat) == 0)
-            std::cout << ".0";
-            std::cout << "f" << std::endl;
+            if (_valueFloat > std::numeric_limits<float>::min() - std::numeric_limits<float>::max() && _valueFloat < std::numeric_limits<float>::max()) {
+                std::cout << "float: " << _valueFloat;
+                if (_valueFloat - static_cast<int>(_valueFloat) == 0)
+                std::cout << ".0";
+                std::cout << "f" << std::endl;
             }
             else
                 std::cout << "float: impossible" << std::endl;

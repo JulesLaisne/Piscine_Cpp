@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 16:49:38 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/26 15:06:06 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/28 11:30:35 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int main( void ) {
 
         Jules.signForm(*form);
         Jules.executeForm(*form);
-        std::cout << *form << std::endl;        
+        std::cout << *form << std::endl;
+        delete form;       
 
     } 
     catch (std::exception &e) {

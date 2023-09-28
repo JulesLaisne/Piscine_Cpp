@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 13:22:24 by juleslaisne       #+#    #+#             */
-/*   Updated: 2023/09/26 14:59:53 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/28 11:30:43 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class AForm {
     public:
         
         AForm(const std::string name, int gradeToSign, int gradeToExe);
-        ~AForm();
+        virtual ~AForm();
 
         std::string getName() const;
         bool        getSigned() const;

@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 11:35:53 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/04 14:22:06 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/28 11:01:15 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,35 @@ int main()
     
     std::cout << "---------------------" << std::endl;
     std::cout << "---------------------" << std::endl;
+
+    std::cout << "Mutant Stack List" << std::endl;
+    MutantStack<int, std::list<int> > mstackL;
+    mstackL.push(5);
+    mstackL.push(17);
+    std::cout << "Top element" << std::endl;
+    std::cout << mstackL.top() << std::endl;
+    mstackL.pop();
+    std::cout << "Size stack" << std::endl;
+    std::cout << mstackL.size() << std::endl;
+    mstackL.push(3);
+    mstackL.push(5);
+    mstackL.push(737);
+    mstackL.push(0);
+    MutantStack<int, std::list<int> >::iterator itL = mstackL.begin();
+    MutantStack<int, std::list<int> >::iterator iteL = mstackL.end();
+    ++itL;
+    --itL;
+    std::cout << "stack iteration" << std::endl;
+    while (itL != iteL)
+    {
+        std::cout << *itL << std::endl;
+        ++itL;
+    }
+    std::stack<int, std::list<int> > sL(mstackL);
+
+    std::cout << "---------------------" << std::endl;
+    std::cout << "---------------------" << std::endl;
+
     std::cout << "Lists" << std::endl;
     
     std::list<int> lst;
@@ -67,5 +96,6 @@ int main()
         ++it1;
     }
     std::list<int> s1(lst);
+    
     return 0;
 }
