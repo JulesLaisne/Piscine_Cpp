@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 13:59:30 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 08:45:32 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/09/28 15:34:06 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ struct Data {
 
 class Serializer
 {
-    public:
+    private:
         Serializer();
         ~Serializer();
         Serializer(Serializer const & cpy);
         Serializer & operator=(Serializer const & other);
+    public:
         
         static uintptr_t    serialize(Data *ptr);
         static Data*        deserialize(uintptr_t raw);
