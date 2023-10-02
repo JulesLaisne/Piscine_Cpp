@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 09:49:42 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 15:30:34 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/10/02 14:07:49 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,18 @@ class Array {
         
         const T operator[]( unsigned int i ) const {
             
-            if (i >= _size)
+            if (i < 0)
                 throw OutOfLowerLimits();
+            if (static_cast<unsigned int>(i) >= _size)
+                throw OutOfUpperLimits();
             return _tab[i];
         }
 
-        T& operator[]( unsigned int i ) {
+        T& operator[]( int i ) {
             
-            if (i >= _size)
+            if (i < 0)
+                throw OutOfLowerLimits();
+            if (static_cast<unsigned int>(i) >= _size)
                 throw OutOfUpperLimits();
             return _tab[i];
         }

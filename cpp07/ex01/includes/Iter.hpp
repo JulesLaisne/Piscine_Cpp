@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 09:39:34 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/02 09:45:30 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/10/02 14:02:30 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ template <typename T>
 
 void    function(T tab) {
 
-    std::cout << "element = " << tab << std::endl;
+    std::cout << tab << std::endl;
 }
 
 template <typename T>
@@ -27,7 +27,6 @@ template <typename T>
 void    Iter(T *tab, int size, void (*f)(T)) {
 
     for (int i = 0; i < size; i++) {
-
         f(tab[i]);
     }
     return ;

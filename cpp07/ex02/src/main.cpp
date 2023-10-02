@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 12:48:27 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/20 15:30:54 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/10/02 14:12:29 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # include <cstdlib>
 #include "../includes/Array.hpp"
 
-#define MAX_VAL 750
+#define MAX_VAL 10
 int main( void )
 {
     Array<int> numbers(MAX_VAL);
@@ -29,13 +29,21 @@ int main( void )
         Array<int> tmp = numbers;
         Array<int> test(tmp);
     }
-
+    {
+        Array<int> empty;
+        std::cout << empty.size() << std::endl;
+        for (int i = 0; i < static_cast<int>(empty.size()); i++) {
+            std::cout << empty[i] << std::endl;
+        }
+    }
     for (int i = 0; i < MAX_VAL; i++) {
         if (mirror[i] != numbers[i])
         {
             std::cerr << "didn't save the same value!!" << std::endl;
             return 1;
         }
+        else
+            std::cout << numbers[i] << std::endl;
     }
     try {
         numbers[-2] = 0;
