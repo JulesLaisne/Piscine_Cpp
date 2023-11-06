@@ -6,7 +6,7 @@
 /*   By: jlaisne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/02 13:13:04 by jlaisne           #+#    #+#             */
-/*   Updated: 2023/09/04 08:48:55 by jlaisne          ###   ########.fr       */
+/*   Updated: 2023/11/06 15:19:08 by jlaisne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int main ( void ) {
         lst1.push_back(46);
         
         easyfind(lst1, 39);
+        easyfind(lst1, 45);
+        easyfind(lst1, 25);
     }
     catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
     }
 }
